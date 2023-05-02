@@ -1,0 +1,21 @@
+/*__________ GENERAL __________*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*__________ MOBILE (FIRST, YOU RASCAL!) __________*/
+
+/*__________ TABLET __________*/
+@media only screen and (min-width: 481px) {
+}
+
+/*__________ WEB (SMALLER SCREENS) __________*/
+@media only screen and (min-width: 769px) {
+}
+
+/*__________ WEB __________*/
+@media only screen and (min-width: 1025px) {
+}
