@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+p {
+  max-width: 50ch;
+}
+
 /*__________ MOBILE (FIRST, YOU RASCAL!) __________*/
 
 /*__________ TABLET __________*/
