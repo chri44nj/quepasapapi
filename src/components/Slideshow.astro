@@ -1,0 +1,229 @@
+---
+---
+
+<div class="container">
+  <div class="slider">
+    <div class="slides">
+      <input type="radio" name="radioButton" id="radio1" />
+      <input type="radio" name="radioButton" id="radio2" />
+      <input type="radio" name="radioButton" id="radio3" />
+      <input type="radio" name="radioButton" id="radio4" />
+      <input type="radio" name="radioButton" id="radio5" />
+      <input type="radio" name="radioButton" id="radio6" />
+      <input type="radio" name="radioButton" id="radio7" />
+      <input type="radio" name="radioButton" id="radio8" />
+
+      <div class="slide first">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+      <div class="slide">
+        <img src="img/product.webp" alt="" />
+      </div>
+
+      <div class="autoNavigation">
+        <div class="autoButton1"></div>
+        <div class="autoButton2"></div>
+        <div class="autoButton3"></div>
+        <div class="autoButton4"></div>
+        <div class="autoButton5"></div>
+        <div class="autoButton6"></div>
+        <div class="autoButton7"></div>
+        <div class="autoButton8"></div>
+      </div>
+    </div>
+    <div class="manualNavigation">
+      <label for="radio1" class="manualButton"></label>
+      <label for="radio2" class="manualButton"></label>
+      <label for="radio3" class="manualButton"></label>
+      <label for="radio4" class="manualButton"></label>
+      <label for="radio5" class="manualButton"></label>
+      <label for="radio6" class="manualButton"></label>
+      <label for="radio7" class="manualButton"></label>
+      <label for="radio8" class="manualButton"></label>
+    </div>
+  </div>
+  <script src="../scripts/script.js"></script>
+</div>
+
+<style>
+  .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+    padding-bottom: 3rem;
+  }
+
+  .slider {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .slides {
+    width: 800%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    width: 12.5%;
+    transition: 2s;
+  }
+
+  .slide img {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /** Manual navigation **/
+
+  .manualNavigation,
+  .autoNavigation {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .manualButton {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  .manualButton:hover {
+    background-color: black;
+  }
+
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first {
+    margin-left: -12.5%;
+  }
+
+  #radio3:checked ~ .first {
+    margin-left: -25%;
+  }
+
+  #radio4:checked ~ .first {
+    margin-left: -37.5%;
+  }
+
+  #radio5:checked ~ .first {
+    margin-left: -50%;
+  }
+
+  #radio6:checked ~ .first {
+    margin-left: -62.5%;
+  }
+
+  #radio7:checked ~ .first {
+    margin-left: -75%;
+  }
+
+  #radio8:checked ~ .first {
+    margin-left: -87.5%;
+  }
+
+  /** Automatic navigation **/
+
+  .autoNavigation div {
+    border: 2px solid hotpink;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+
+  #radio1:checked ~ .autoNavigation .autoButton1 {
+    background-color: black;
+  }
+
+  #radio2:checked ~ .autoNavigation .autoButton2 {
+    background-color: black;
+  }
+
+  #radio3:checked ~ .autoNavigation .autoButton3 {
+    background-color: black;
+  }
+
+  #radio4:checked ~ .autoNavigation .autoButton4 {
+    background-color: black;
+  }
+
+  #radio5:checked ~ .autoNavigation .autoButton5 {
+    background-color: black;
+  }
+
+  #radio6:checked ~ .autoNavigation .autoButton6 {
+    background-color: black;
+  }
+
+  #radio7:checked ~ .autoNavigation .autoButton7 {
+    background-color: black;
+  }
+
+  #radio8:checked ~ .autoNavigation .autoButton8 {
+    background-color: black;
+  }
+
+  /*__________ TABLET __________*/
+  @media only screen and (min-width: 481px) {
+    .autoNavigation,
+    .manualNavigation {
+      gap: 2rem;
+    }
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+  }
+
+  /*__________ WEB __________*/
+  @media only screen and (min-width: 1025px) {
+    .autoNavigation,
+    .manualNavigation {
+      gap: 3rem;
+    }
+
+    .container {
+      height: 100vh;
+    }
+
+    .slide img {
+      width: 70%;
+    }
+  }
+</style>
