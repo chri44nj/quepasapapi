@@ -38,7 +38,7 @@
         <img src="img/product.webp" alt="" />
       </div>
 
-      <div class="arrow-container">
+      <div class="arrowContainer">
         <div class="arrow prevButton">
           <span>&#8249;</span>
         </div>
@@ -71,50 +71,13 @@
   </div>
 
   <style>
-    .arrow-container {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-    }
-
-    .arrow {
-      width: 40px;
-      height: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .arrow:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .arrow span {
-      color: #fff;
-      font-size: 24px;
-      line-height: 1;
-    }
-
-    .prevButton {
-      margin-right: 10px;
-    }
-
-    .nextButton {
-      margin-left: 10px;
-    }
-
     /***************** */
     .container {
       position: relative;
       height: 100%;
       display: flex;
       justify-content: center;
-      background-color: cadetblue;
+      background-color: white;
       padding-bottom: 3rem;
     }
 
@@ -245,6 +208,44 @@
     }
 
     /* Left / Right arrow */
+    .arrowContainer {
+      position: absolute;
+      left: 50%;
+      bottom: 17.5px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15rem;
+    }
+
+    .arrow {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .arrow:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .arrow span {
+      color: #fff;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .prevButton {
+      margin-right: 10px;
+    }
+
+    .nextButton {
+      margin-left: 10px;
+    }
 
     /*__________ TABLET __________*/
     @media only screen and (min-width: 481px) {
@@ -252,6 +253,14 @@
       .manualNavigation {
         gap: 2rem;
       }
+
+      .arrowContainer {
+        gap: 23rem;
+      }
+    }
+
+    .slide img {
+      width: 70%;
     }
 
     /*__________ WEB (SMALLER SCREENS) __________*/
@@ -263,14 +272,16 @@
       .autoNavigation,
       .manualNavigation {
         gap: 3rem;
+        bottom: 22.5px;
       }
 
       .container {
         height: 100vh;
       }
 
-      .slide img {
-        width: 70%;
+      .arrowContainer {
+        gap: 30rem;
+        bottom: 10px;
       }
     }
   </style>
