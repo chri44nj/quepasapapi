@@ -1,0 +1,37 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<span class="recipesHeadline">
+  <h2>Opskrifter</h2>
+  <div class="underline"></div>
+</span>
+<div class="recipesContent">
+  <span>
+    <h3>Brug for inspiration?</h3>
+    <p>Fuldend din tapasoplevelse med en af vores lækre opskrifter!</p>
+  </span>
+  <img src="img/product.webp" alt="" />
+  <Button variant="secondary" title="Læs mere" />
+</div>
+
+<style>
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .recipesHeadline {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+  }
+
+  .recipesContent {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+</style>
