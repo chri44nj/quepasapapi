@@ -1,0 +1,101 @@
+---
+import Secondarylayout from "../layouts/Secondarylayout.astro";
+import RecipeCouple from "../components/RecipeCouple.astro";
+import Button from "../components/Button.astro";
+---
+
+<Secondarylayout>
+  <div class="recipeContainer">
+    <span>
+      <h2>Opskrifter</h2>
+      <div class="underline"></div>
+    </span>
+    <div class="flexContainer">
+      <p>Vores tapas er skabt til dele gode stunder med dine yndlingsmennesker. Gå på opdagelse i vores opskrifter og tag jeres tapasoplevelse til nye højder!</p>
+    </div>
+    <RecipeCouple title="Grøn Pesto" link="img/pesto.png">
+      <Button variant="secondaryBig" title="OPSKRIFT" />
+    </RecipeCouple>
+
+    <RecipeCouple title="Bruschetta" link="img/bruschetta.png" order="second">
+      <Button variant="secondaryBig" title="OPSKRIFT" />
+    </RecipeCouple>
+
+    <RecipeCouple title="Sangria" link="img/sangria.png">
+      <Button variant="secondaryBig" title="OPSKRIFT" />
+    </RecipeCouple>
+  </div>
+</Secondarylayout>
+
+<style>
+  .recipeContainer {
+    margin-bottom: 10rem;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-inline: 2rem;
+    padding-top: 10rem;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .flexContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-inline: 2rem;
+    margin-top: 1rem;
+  }
+
+  p {
+    text-align: right;
+  }
+
+  .catchPhrase {
+    margin-left: 10%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-block: 5rem;
+  }
+
+  .times {
+    color: #d1e756;
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+
+  @media only screen and (min-width: 769px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .catchPhrase {
+      display: flex;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-left: 0;
+      margin-block: 10rem;
+    }
+
+    .foodFriends,
+    .times {
+      font-size: 2.5rem;
+    }
+  }
+
+  /*__________ WEB __________*/
+  @media only screen and (min-width: 1025px) {
+    .foodFriends,
+    .times {
+      font-size: 3rem;
+    }
+  }
+</style>

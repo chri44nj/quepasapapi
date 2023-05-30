@@ -1,0 +1,55 @@
+---
+const { order, link, title } = Astro.props;
+---
+
+<div class="recipeGrid">
+  <img class={order} src={link} alt="" />
+  <div>
+    <h3>{title}</h3>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .recipeGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 2rem;
+    margin-block: 5rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .recipeGrid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second {
+    order: 1;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    writing-mode: vertical-lr;
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+    h3 {
+      font-size: 5rem;
+      writing-mode: horizontal-tb;
+    }
+
+    .recipeGrid div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
