@@ -1,0 +1,102 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<div class="summerBundle">
+  <img src="img/summerBundle.png" alt="" />
+
+  <p id="productInfo">249 DKK // 4-6 personer // Juni, Juli & August</p>
+  <img src="img/products.png" alt="" />
+  <p>Der er få ting, der slår en god dansk sommer - så skulle de da lige være lækker spansk tapas!</p>
+  <p>Med Que Pasa Papis Summer Bundle kan du heldigvis få det bedste fra begge verdener. Du får en bundle fuld af autentisk spansk tapas, der nemt kan tages med, når du drager ud i det danske sommerland med dine yndlingsmennesker.</p>
+  <p>Bestil din Summer Bundle her og gør dig klar til en uforglemmelig smagsoplevelse under åben himmel!</p>
+  <Button variant="primary" title="Køb nu" />
+</div>
+
+<span>
+  <h2>Inkluderet</h2>
+  <div class="underline"></div>
+</span>
+<ul class="list1">
+  <li>1 x Jamon Iberico</li>
+  <li>1 x Salchichon Iberico</li>
+  <li>1 x Chorizo Iberico</li>
+  <li>1 x Lomo Gran Reserve</li>
+</ul>
+
+<ul class="list2">
+  <li>Picos de Pan, Breadsticks x 1</li>
+  <li>Classic Spanish Potato Chips x 1</li>
+  <li>Spanish Tapas Cheese x 1</li>
+  <li>Rosemary Fuet x 1</li>
+</ul>
+
+<slot />
+<Button variant="primary" title="Køb nu" />
+
+<style>
+  .summerBundle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .summerBundle p {
+    width: 80%;
+  }
+
+  #productInfo {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-transform: uppercase;
+    padding-inline: 2rem;
+    margin-top: 5rem;
+  }
+
+  .list1,
+  .list2 {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-block: 2rem;
+  }
+
+  .list1 {
+    margin-left: 10%;
+  }
+
+  .list2 {
+    align-items: flex-end;
+    margin-right: 10%;
+  }
+
+  /*__________ TABLET __________*/
+  @media only screen and (min-width: 481px) {
+    .summerBundleImg img {
+      width: 70%;
+    }
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+  }
+
+  /*__________ WEB __________*/
+  @media only screen and (min-width: 1025px) {
+  }
+</style>
