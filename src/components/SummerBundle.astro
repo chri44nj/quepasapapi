@@ -3,14 +3,13 @@ import Button from "../components/Button.astro";
 ---
 
 <div class="summerBundle">
-  <img src="img/summerBundle.png" alt="" />
-
+  <img id="summerBundle" src="img/summerBundle.png" alt="" />
   <p id="productInfo">249 DKK // 4-6 personer // Juni, Juli & August</p>
-  <img src="img/products.png" alt="" />
-  <p>Der er få ting, der slår en god dansk sommer - så skulle de da lige være lækker spansk tapas!</p>
+  <img id="products" src="img/products.png" alt="" />
+  <p>Der er få ting, der slår en god dansk sommer... Så skulle det da lige være en omgang lækker spansk tapas!</p>
   <p>Med Que Pasa Papis Summer Bundle kan du heldigvis få det bedste fra begge verdener. Du får en bundle fuld af autentisk spansk tapas, der nemt kan tages med, når du drager ud i det danske sommerland med dine yndlingsmennesker.</p>
   <p>Bestil din Summer Bundle her og gør dig klar til en uforglemmelig smagsoplevelse under åben himmel!</p>
-  <Button variant="primary" title="Køb nu" />
+  <Button link="https://quepasapapi.com/cart" variant="primary" title="Køb nu" />
 </div>
 
 <span>
@@ -32,7 +31,7 @@ import Button from "../components/Button.astro";
 </ul>
 
 <slot />
-<Button variant="primary" title="Køb nu" />
+<Button link="https://quepasapapi.com/cart" variant="primary" title="Køb nu" />
 
 <style>
   .summerBundle {
@@ -87,13 +86,32 @@ import Button from "../components/Button.astro";
 
   /*__________ TABLET __________*/
   @media only screen and (min-width: 481px) {
-    .summerBundleImg img {
-      width: 70%;
+    #summerBundle {
+      width: 60%;
+    }
+
+    #products {
+      width: 40%;
     }
   }
 
   /*__________ WEB (SMALLER SCREENS) __________*/
   @media only screen and (min-width: 769px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    ul li {
+      font-size: 2rem;
+    }
+
+    #productInfo {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 
   /*__________ WEB __________*/

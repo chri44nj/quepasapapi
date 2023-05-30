@@ -7,7 +7,7 @@ const { variant, order, img, title, alignment } = Astro.props;
     <img class={order} src={img} alt="" />
     <h3>{title}</h3>
   </div>
-  <div class={alignment}>
+  <div id="slot" class={alignment}>
     <slot />
   </div>
 </div>
@@ -57,5 +57,22 @@ const { variant, order, img, title, alignment } = Astro.props;
     margin-left: 20%;
     margin-right: 10%;
     text-align: right;
+  }
+
+  #slot {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+    h3 {
+      font-size: 5rem;
+    }
+    img {
+      width: 40%;
+    }
   }
 </style>

@@ -40,14 +40,13 @@
   .headerUnderline {
     background-color: black;
     height: 1.5px;
-    width: 90%;
   }
   .stickyHeader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 50;
   }
   .topNav {
     display: flex;
@@ -76,11 +75,15 @@
   .menu {
     display: flex;
     flex-direction: column;
-    padding: 5.5rem 0 0 1.5rem;
+    gap: 2rem;
+    padding: 6rem 0 0 10%;
   }
 
   .menu li {
     list-style-type: none;
+    text-align: right;
+    margin-right: 10%;
+    z-index: 100;
   }
 
   .menu li a {
@@ -91,13 +94,10 @@
   }
 
   .menu li a:hover {
-    color: #d3e757;
+    opacity: 0.5;
   }
 
   .burgerMenu {
-    /* position: fixed;
-    top: 25px;
-    right: 25px; */
     cursor: pointer;
     z-index: 10;
   }
@@ -139,6 +139,26 @@
   @media only screen and (min-width: 769px) {
     .logo a img {
       width: 150%;
+    }
+
+    .topNav {
+      padding: 2rem;
+    }
+
+    .bar {
+      width: 37.5px;
+      height: 6px;
+    }
+
+    .burgerMenu.active .bar:nth-child(1) {
+      transform: translateY(14px) rotate(50deg);
+    }
+    .burgerMenu.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-50deg);
+    }
+
+    .menu {
+      padding-top: 8rem;
     }
   }
 

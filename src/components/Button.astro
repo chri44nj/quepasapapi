@@ -4,7 +4,7 @@ const { variant, link, title } = Astro.props;
 
 <div class="buttonContainer">
   <button class={variant}>
-    <a href={link}>{title}</a>
+    <a target="_blank" href={link}>{title}</a>
   </button>
 </div>
 
@@ -31,12 +31,12 @@ const { variant, link, title } = Astro.props;
     border: 2px solid transparent;
   }
   .primary:hover {
-    background-color: transparent;
+    background-color: black;
     border: 2px solid black;
   }
 
   .primary:hover a {
-    color: black;
+    color: #d1e756;
   }
 
   .secondary {
@@ -46,7 +46,15 @@ const { variant, link, title } = Astro.props;
     padding: 0.25rem 1rem;
   }
 
-  .secondary:hover {
+  .secondaryBig {
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+  }
+
+  .secondary:hover,
+  .secondaryBig:hover {
     background-color: #d1e756;
   }
 

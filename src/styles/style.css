@@ -29,6 +29,9 @@ p {
 
 /*__________ WEB (SMALLER SCREENS) __________*/
 @media only screen and (min-width: 769px) {
+  .underline {
+    height: 3px;
+  }
 }
 
 /*__________ WEB __________*/

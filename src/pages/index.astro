@@ -13,16 +13,18 @@ import SoMe from "../components/SoMe.astro";
     <Slideshow />
   </SummerBundle>
   <div class="catchPhrase">
-    <p>Good food. Good friends.</p>
+    <p class="foodFriends">Good food. Good friends.</p>
     <p class="times">Good times.</p>
   </div>
-  <Couple variant="left" img="img/product.webp" title="autentisk" alignment="start">
+  <Couple variant="left" img="img/authentic.webp" title="autentisk" alignment="start">
     <h4>Nyd autentisk spansk tapas på farten med din Summer bundle fra Que Pasa Papi!</h4>
     <p>Den ultimative tapasoplevelse til din sommer: perfekt til picnic, strandture, udendørsarrangementer eller blot hjemme hos dig selv.</p>
   </Couple>
-  <Couple variant="right" img="img/product.webp" title="spansk" order="second" alignment="end">
-    <h4>Bliv transporteret direkte til Spaniens solrige kyster!</h4>
-    <p>Bestil dit Summer bundle i dag og nyd en uforglemmelig tapasoplevelse - uanset hvor du er.</p>
+  <Couple variant="right" img="img/spanish.webp" title="spansk" order="second" alignment="end">
+    <div class="toTheRight">
+      <h4>Bliv transporteret direkte til Spaniens solrige kyster!</h4>
+      <p>Bestil dit Summer bundle i dag og nyd en uforglemmelig tapasoplevelse - uanset hvor du er.</p>
+    </div>
   </Couple>
   <Recipes />
   <SoMe />
@@ -30,13 +32,52 @@ import SoMe from "../components/SoMe.astro";
   <style>
     .catchPhrase {
       margin-left: 10%;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: bold;
       margin-block: 5rem;
     }
 
     .times {
       color: #d1e756;
+    }
+
+    /*__________ WEB (SMALLER SCREENS) __________*/
+    @media only screen and (min-width: 769px) {
+      .catchPhrase {
+        display: flex;
+        justify-content: center;
+        gap: 0.7rem;
+        margin-left: 0;
+        margin-block: 10rem;
+      }
+
+      .foodFriends,
+      .times {
+        font-size: 2.5rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+        max-width: 50%;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .toTheRight {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+
+    /*__________ WEB __________*/
+    @media only screen and (min-width: 1025px) {
+      .foodFriends,
+      .times {
+        font-size: 3rem;
+      }
     }
   </style>
 </Mainlayout>

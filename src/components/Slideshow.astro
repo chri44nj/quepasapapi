@@ -17,25 +17,25 @@
         <img src="img/product.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product2.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product3.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product4.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product5.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product6.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product7.webp" alt="" />
       </div>
       <div class="slide">
-        <img src="img/product.webp" alt="" />
+        <img src="img/product8.webp" alt="" />
       </div>
 
       <div class="arrowContainer">
@@ -77,7 +77,6 @@
       height: 100%;
       display: flex;
       justify-content: center;
-
       padding-bottom: 3rem;
       margin-top: 7rem;
     }
@@ -231,13 +230,16 @@
     }
 
     .arrow:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: black;
     }
 
     .arrow span {
-      color: #fff;
+      color: black;
       font-size: 24px;
-      line-height: 1;
+    }
+
+    .arrow:hover span {
+      color: #d1e756;
     }
 
     .prevButton {
@@ -267,25 +269,32 @@
     /*__________ WEB (SMALLER SCREENS) __________*/
     @media only screen and (min-width: 769px) {
       .container {
-        margin-block: 5rem;
+        margin-top: 7.5rem;
+        margin-bottom: 5rem;
+        height: 80vh;
       }
       .arrowContainer {
         gap: 30rem;
+      }
+
+      .arrow {
+        width: 60px;
+        height: 60px;
+      }
+
+      .arrow span {
+        font-size: 36px;
+      }
+
+      .autoNavigation,
+      .manualNavigation {
+        gap: 3rem;
+        bottom: 0px;
       }
     }
 
     /*__________ WEB __________*/
     @media only screen and (min-width: 1025px) {
-      .autoNavigation,
-      .manualNavigation {
-        gap: 3rem;
-        bottom: 22.5px;
-      }
-
-      .container {
-        height: 100vh;
-      }
-
       .arrowContainer {
         gap: 40rem;
       }

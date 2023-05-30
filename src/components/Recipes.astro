@@ -7,15 +7,27 @@ import Button from "../components/Button.astro";
   <div class="underline"></div>
 </span>
 <div class="recipesContent">
-  <span>
-    <h3>Brug for inspiration?</h3>
-    <p>Fuldend din tapasoplevelse med en af vores lækre opskrifter!</p>
+  <span class="inspiration">
+    <div>
+      <h4>Brug for inspiration?</h4>
+      <p>Fuldend din tapasoplevelse med en af vores lækre opskrifter!</p>
+    </div>
+    <span class="hideMobile">
+      <Button variant="secondaryBig" title="Læs mere" />
+    </span>
   </span>
-  <img src="img/product.webp" alt="" />
-  <Button variant="secondary" title="Læs mere" />
+  <a href="">
+    <img src="img/recipes.webp" alt="recipes" />
+  </a>
+  <span class="hideWeb">
+    <Button variant="secondary" title="Læs mere" />
+  </span>
 </div>
 
 <style>
+  .hideMobile {
+    display: none;
+  }
   h2 {
     text-transform: uppercase;
   }
@@ -33,5 +45,57 @@ import Button from "../components/Button.astro";
     gap: 1rem;
     margin-top: 1rem;
     margin-bottom: 5rem;
+  }
+
+  a {
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .recipesContent {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-inline: 10%;
+      margin-top: 5rem;
+      padding: 0;
+      gap: 3rem;
+    }
+
+    .inspiration {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      order: 1;
+    }
+
+    .hideMobile {
+      display: block;
+    }
+
+    .hideWeb {
+      display: none;
+    }
+
+    h4 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
   }
 </style>

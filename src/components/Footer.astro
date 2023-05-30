@@ -4,39 +4,23 @@
 <footer>
   <div class="footerUnderline"></div>
   <h4>Shop</h4>
-  <p>Shop All</p>
+  <a target="_blank" href="https://quepasapapi.com/collections/shop-all">Shop All</a>
   <h4>Information</h4>
-  <p>About Us</p>
-  <p>FAQ</p>
-  <p>Our Purpose</p>
-  <p>Reviews</p>
-  <p>Smiley-reports</p>
-  <p>Instagram</p>
-  <p>Facebook</p>
+  <a target="_blank" href="https://quepasapapi.com/pages/about-us">About Us</a>
+  <a target="_blank" href="https://quepasapapi.com/da/pages/faqs">FAQ</a>
+  <a target="_blank" href="https://quepasapapi.com/da/pages/purpose">Our Purpose</a>
+  <a target="_blank" href="https://quepasapapi.com/da/pages/reviews">Reviews</a>
+  <a target="_blank" href="https://www.findsmiley.dk/974545">Smiley Reports</a>
   <h4>Newsletter</h4>
   <form action="subscribe.php" method="POST">
-    <input
-      class="email"
-      type="email"
-      id="email"
-      name="email"
-      placeholder="E-mail address"
-      required
-    />
+    <input class="email" type="email" id="email" name="email" placeholder="E-mail address" required />
     <input class="subscribe" type="submit" value="SUBSCRIBE" />
   </form>
   <div class="SoMe">
-    <a target="blank" href="https://www.facebook.com/royalescapescph"
-      ><i class="fa-brands fa-facebook"></i></a
-    >
-    <a target="blank" href="https://www.instagram.com/royalescapescph/"
-      ><i class="fa-brands fa-instagram"></i></a
-    >
+    <a target="_blank" href="https://www.facebook.com/quepasapapiofficial"><i class="fa-brands fa-facebook"></i></a>
+    <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/"><i class="fa-brands fa-instagram"></i></a>
   </div>
-  <p class="copyright">
-    © 2023, Que Pasa Papi All rights reserved Terms & conditions Privacy Policy
-    Cookies
-  </p>
+  <p class="copyright">© 2023, Que Pasa Papi All rights reserved Terms & conditions Privacy Policy Cookies</p>
 </footer>
 
 <style>
@@ -44,8 +28,13 @@
     font-family: "Poppins", sans-serif;
   }
   footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-inline: 10%;
+    padding-bottom: 5rem;
   }
 
   .footerUnderline {
@@ -74,9 +63,9 @@
   }
 
   .subscribe:hover {
-    background-color: transparent;
+    background-color: black;
     border: 2px solid black;
-    color: black;
+    color: #d1e756;
     font-size: 1rem;
   }
 
@@ -100,6 +89,15 @@
     margin-block: 2rem;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    opacity: 0.5;
+  }
+
   i {
     color: black;
     font-size: 2rem;
@@ -120,6 +118,28 @@
 
     .subscribe {
       width: 75%;
+    }
+
+    a,
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    .email {
+      width: 125%;
+      font-size: 1.2rem;
+    }
+
+    .subscribe {
+      width: 125%;
+    }
+
+    i {
+      font-size: 3rem;
+    }
+
+    .copyright {
+      font-size: 1.2rem;
     }
   }
 

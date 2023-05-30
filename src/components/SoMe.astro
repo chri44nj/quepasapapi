@@ -10,16 +10,20 @@
 <div class="followInsta">
   <div class="alignBottom">
     <p>Instagram:</p>
-    <p>@quepasapapiofficial</p>
+    <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/">@quepasapapiofficial</a>
   </div>
-  <img src="img/product.webp" alt="" />
+  <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/">
+    <img src="img/instagram.webp" alt="" />
+  </a>
 </div>
 
 <div class="followFB">
-  <img src="img/product.webp" alt="" />
+  <a target="_blank" href="https://www.facebook.com/quepasapapiofficial">
+    <img src="img/facebook.webp" alt="" />
+  </a>
   <div class="alignBottom">
     <p>Facebook:</p>
-    <p>/quepasapapiofficial</p>
+    <a target="_blank" href="https://www.facebook.com/quepasapapiofficial">/quepasapapiofficial</a>
   </div>
 </div>
 
@@ -57,5 +61,31 @@
 
   img {
     width: 100%;
+  }
+
+  a {
+    color: black;
+  }
+
+  @media only screen and (min-width: 769px) {
+    .follow {
+      text-align: left;
+      margin-left: 10%;
+      font-size: 2rem;
+    }
+
+    .followInsta {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.5rem;
+    }
+
+    .followFB {
+      font-size: 1.5rem;
+    }
+
+    img {
+      width: 500px;
+    }
   }
 </style>
