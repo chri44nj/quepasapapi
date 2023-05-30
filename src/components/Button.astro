@@ -1,2 +1,58 @@
 ---
+const { variant, link, title } = Astro.props;
 ---
+
+<div class="buttonContainer">
+  <button class={variant}>
+    <a href={link}>{title}</a>
+  </button>
+</div>
+
+<style>
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    font-size: 1.25rem;
+    padding: 0.5rem 3.5rem;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  button a {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+
+  .primary {
+    background-color: #d1e756;
+    border: 2px solid transparent;
+  }
+
+  .primary:hover {
+    background-color: transparent;
+    border: 2px solid black;
+  }
+
+  .primary:hover a {
+    color: black;
+  }
+
+  .secondary {
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+  .secondary:hover {
+    background-color: #d1e756;
+  }
+
+  .secondary:hover a {
+    color: black;
+  }
+</style>

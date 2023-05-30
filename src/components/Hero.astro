@@ -1,2 +1,47 @@
 ---
 ---
+
+<div class="heroVideo">
+  <video class="heroMobile" autoplay loop muted>
+    <source src="img/heroMobile.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <video class="heroWeb" autoplay loop muted>
+    <source src="img/heroWeb.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<style>
+  .heroVideo {
+    height: 100vh;
+  }
+
+  .heroVideo video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .heroWeb {
+    display: none;
+  }
+
+  @media only screen and (min-width: 481px) {
+    .heroWeb {
+      display: block;
+    }
+
+    .heroMobile {
+      display: none;
+    }
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+  }
+
+  /*__________ WEB __________*/
+  @media only screen and (min-width: 1025px) {
+  }
+</style>

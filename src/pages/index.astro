@@ -1,13 +1,42 @@
 ---
 import Mainlayout from "../layouts/Mainlayout.astro";
-import Slideshow from "../components/Slideshow.astro";
+
 import SummerBundle from "../components/SummerBundle.astro";
-import Hero from "../components/Hero.astro";
+import Slideshow from "../components/Slideshow.astro";
+import Couple from "../components/Couple.astro";
+import Recipes from "../components/Recipes.astro";
+import SoMe from "../components/SoMe.astro";
 ---
 
 <Mainlayout title="Welcome">
-  <Hero />
-  <h1>Que Pasa Papi</h1>
-  <Slideshow />
-  <SummerBundle />
+  <SummerBundle>
+    <Slideshow />
+  </SummerBundle>
+  <div class="catchPhrase">
+    <p>Good food. Good friends.</p>
+    <p class="times">Good times.</p>
+  </div>
+  <Couple variant="left" img="img/product.webp" title="autentisk" alignment="start">
+    <h4>Nyd autentisk spansk tapas på farten med din Summer bundle fra Que Pasa Papi!</h4>
+    <p>Den ultimative tapasoplevelse til din sommer: perfekt til picnic, strandture, udendørsarrangementer eller blot hjemme hos dig selv.</p>
+  </Couple>
+  <Couple variant="right" img="img/product.webp" title="spansk" order="second" alignment="end">
+    <h4>Bliv transporteret direkte til Spaniens solrige kyster!</h4>
+    <p>Bestil dit Summer bundle i dag og nyd en uforglemmelig tapasoplevelse - uanset hvor du er.</p>
+  </Couple>
+  <Recipes />
+  <SoMe />
 </Mainlayout>
+
+<style>
+  .catchPhrase {
+    margin-left: 10%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-block: 5rem;
+  }
+
+  .times {
+    color: #d1e756;
+  }
+</style>
