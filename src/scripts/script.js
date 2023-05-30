@@ -102,3 +102,5 @@ function startSlideshowFromCurrentWithDelay() {
     startSlideshow();
   }, 10000); // 10 seconds
 }
+
+/* Auto-scroll */

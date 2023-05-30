@@ -15,6 +15,12 @@ p {
   max-width: 50ch;
 }
 
+.underline {
+  background-color: black;
+  height: 1.5px;
+  width: 100%;
+}
+
 /*__________ MOBILE (FIRST, YOU RASCAL!) __________*/
 
 /*__________ TABLET __________*/

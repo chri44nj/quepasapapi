@@ -2,6 +2,7 @@
 const { title } = Astro.props;
 import "../styles/style.css";
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -18,17 +19,23 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Header />
+    <Hero />
     <main>
       <slot />
+      <Footer />
     </main>
-    <Footer />
-
     <script src="../scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/b91707f180.js" crossorigin="anonymous"></script>
   </body>
 </html>
 
 <style>
   * {
     font-family: "Poppins", sans-serif;
+  }
+
+  main {
+    background-image: url("img/backgroundMobile.png");
+    background-size: cover;
   }
 </style>

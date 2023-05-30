@@ -77,8 +77,9 @@
       height: 100%;
       display: flex;
       justify-content: center;
-      background-color: white;
+
       padding-bottom: 3rem;
+      margin-top: 7rem;
     }
 
     .slider {
@@ -211,16 +212,16 @@
     .arrowContainer {
       position: absolute;
       left: 50%;
-      bottom: 17.5px;
+      top: 37.5%;
       transform: translateX(-50%);
       display: flex;
-      gap: 15rem;
+      gap: 16rem;
     }
 
     .arrow {
       width: 40px;
       height: 40px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(204, 233, 75, 0.98);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -265,6 +266,12 @@
 
     /*__________ WEB (SMALLER SCREENS) __________*/
     @media only screen and (min-width: 769px) {
+      .container {
+        margin-block: 5rem;
+      }
+      .arrowContainer {
+        gap: 30rem;
+      }
     }
 
     /*__________ WEB __________*/
@@ -280,8 +287,7 @@
       }
 
       .arrowContainer {
-        gap: 30rem;
-        bottom: 10px;
+        gap: 40rem;
       }
     }
   </style>
