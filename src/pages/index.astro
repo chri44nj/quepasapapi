@@ -8,25 +8,12 @@ import Recipes from "../components/Recipes.astro";
 import SoMe from "../components/SoMe.astro";
 ---
 
-<Mainlayout title="Welcome">
-  <SummerBundle>
-    <Slideshow />
-  </SummerBundle>
-  <div class="catchPhrase">
-    <p>Good food. Good friends.</p>
-    <p class="times">Good times.</p>
-  </div>
-  <Couple variant="left" img="img/product.webp" title="autentisk" alignment="start">
-    <h4>Nyd autentisk spansk tapas på farten med din Summer bundle fra Que Pasa Papi!</h4>
-    <p>Den ultimative tapasoplevelse til din sommer: perfekt til picnic, strandture, udendørsarrangementer eller blot hjemme hos dig selv.</p>
-  </Couple>
-  <Couple variant="right" img="img/product.webp" title="spansk" order="second" alignment="end">
-    <h4>Bliv transporteret direkte til Spaniens solrige kyster!</h4>
-    <p>Bestil dit Summer bundle i dag og nyd en uforglemmelig tapasoplevelse - uanset hvor du er.</p>
-  </Couple>
-  <Recipes />
-  <SoMe />
-</Mainlayout>
+<Couple variant="right" img="img/product.webp" title="spansk" order="second" alignment="end">
+  <h4>Bliv transporteret direkte til Spaniens solrige kyster!</h4>
+  <p>Bestil dit Summer bundle i dag og nyd en uforglemmelig tapasoplevelse - uanset hvor du er.</p>
+</Couple>
+<Recipes />
+<SoMe />
 
 <style>
   .catchPhrase {
