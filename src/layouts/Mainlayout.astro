@@ -35,7 +35,14 @@ import Footer from "../components/Footer.astro";
   }
 
   main {
-    background-image: url("../img/backgroundMobile.png");
+    background-image: url("../img/backgroundMobile.webp");
     background-size: cover;
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+  @media only screen and (min-width: 769px) {
+    main {
+      background-image: url("../img/backgroundWeb.webp");
+    }
   }
 </style>
