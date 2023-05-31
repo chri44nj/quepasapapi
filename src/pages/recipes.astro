@@ -4,7 +4,7 @@ import RecipeCouple from "../components/RecipeCouple.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Secondarylayout>
+<Secondarylayout title="Opskrifter">
   <div class="recipeContainer">
     <span>
       <h2>Opskrifter</h2>
@@ -14,18 +14,34 @@ import Button from "../components/Button.astro";
       <p>Vores tapas er skabt til dele gode stunder med dine yndlingsmennesker. Gå på opdagelse i vores opskrifter og tag jeres tapasoplevelse til nye højder!</p>
     </div>
     <RecipeCouple title="Grøn Pesto" link="../img/pesto.webp">
-      <Button variant="secondaryBig" title="OPSKRIFT" />
+      <Button variant="secondaryBig" title="OPSKRIFT" link="undersider/pesto" />
     </RecipeCouple>
 
     <RecipeCouple title="Bruschetta" link="../img/bruschetta.webp" order="second">
-      <Button variant="secondaryBig" title="OPSKRIFT" />
+      <Button variant="secondaryBig" title="OPSKRIFT" link="undersider/bruschetta" />
     </RecipeCouple>
 
     <RecipeCouple title="Sangria" link="../img/sangria.webp">
-      <Button variant="secondaryBig" title="OPSKRIFT" />
+      <Button variant="secondaryBig" title="OPSKRIFT" link="undersider/sangria" />
     </RecipeCouple>
   </div>
 </Secondarylayout>
+
+<script>
+  const url = "https://bcusqvrnladycinesogy.supabase.co/rest/v1/recipes";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjdXNxdnJubGFkeWNpbmVzb2d5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU1MjkxODcsImV4cCI6MjAwMTEwNTE4N30.dcNERLyqxQGBZjiAlGMXq40oan3C1blBhv-Q218Bhc4";
+
+  const respons = await fetch(url, {
+    method: "GET",
+    headers: {
+      apikey: key,
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await respons.json();
+  console.log(data);
+</script>
 
 <style>
   .recipeContainer {

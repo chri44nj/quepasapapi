@@ -1,0 +1,204 @@
+---
+import Secondarylayout from "../../layouts/Secondarylayout.astro";
+
+export async function getStaticPaths() {
+  const url = "https://bcusqvrnladycinesogy.supabase.co/rest/v1/recipes";
+
+  const options = {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjdXNxdnJubGFkeWNpbmVzb2d5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU1MjkxODcsImV4cCI6MjAwMTEwNTE4N30.dcNERLyqxQGBZjiAlGMXq40oan3C1blBhv-Q218Bhc4",
+    },
+  };
+
+  const respons = await fetch(url, options);
+  const data = await respons.json();
+
+  return data.map((recipe) => ({
+    params: { slug: recipe.name },
+    props: { recipe },
+  }));
+}
+
+const { recipe } = Astro.props;
+---
+
+<Secondarylayout>
+  <img class="hideWeb" src={"../img/" + recipe.img + ".webp"} alt="recipe img" />
+  <div class="recipeInfo hideWeb">
+    <span>
+      <i class="fa-solid fa-clock"></i>
+      {recipe.time}
+    </span>
+    <span>
+      <i class="fa-solid fa-user"></i>
+      {recipe.people}
+    </span>
+  </div>
+  <span class="recipe">
+    <h2>Opskrift på {recipe.name}</h2>
+    <div class="underline"></div>
+    <div class="recipeInfoWeb">
+      <span>
+        <i class="fa-solid fa-clock"></i>
+        {recipe.time}
+      </span>
+      <span>
+        <i class="fa-solid fa-user"></i>
+        {recipe.people}
+      </span>
+    </div>
+  </span>
+  <div class="recipeGrid">
+    <div class="ingredients">
+      <h2>Ingredienser</h2>
+      <p>
+        {recipe.ingredient1}
+      </p>
+      <p>
+        {recipe.ingredient2}
+      </p>
+      <p>
+        {recipe.ingredient3}
+      </p>
+      <p>
+        {recipe.ingredient4}
+      </p>
+      <p>
+        {recipe.ingredient5}
+      </p>
+      <p>
+        {recipe.ingredient6}
+      </p>
+      <p>
+        {recipe.ingredient7}
+      </p>
+      <p>
+        {recipe.ingredient8}
+      </p>
+      <p>
+        {recipe.ingredient9}
+      </p>
+      <p>
+        {recipe.ingredient10}
+      </p>
+    </div>
+
+    <div class="procedure">
+      <h2>Fremgangsmåde</h2>
+      <p>{recipe.procedure}</p>
+    </div>
+
+    <img class="hideMobile" src={"../img/" + recipe.img + ".webp"} alt="recipe img" />
+  </div>
+</Secondarylayout>
+
+<style>
+  .hideMobile {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .recipeInfo {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  .recipeInfoWeb {
+    display: none;
+  }
+
+  .recipeInfo span {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .recipe {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 10%;
+    margin-top: 2.5rem;
+    text-align: right;
+  }
+
+  .ingredients {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-inline: 10%;
+  }
+
+  .procedure {
+    margin-top: 2rem;
+    margin-inline: 10%;
+    margin-bottom: 5rem;
+  }
+
+  /*__________ WEB (SMALLER SCREENS) __________*/
+
+  @media only screen and (min-width: 769px) {
+    .hideMobile {
+      display: block;
+    }
+
+    .hideWeb {
+      display: none;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .recipe {
+      text-align: left;
+    }
+
+    .recipeGrid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr;
+      justify-items: center;
+      align-items: start;
+      gap: 2rem;
+      margin-inline: 10%;
+      margin-block: 5rem;
+    }
+
+    .ingredients {
+      margin-top: 0;
+    }
+
+    .procedure {
+      margin-top: 0;
+    }
+
+    .recipeInfoWeb {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  /*__________ WEB __________*/
+  @media only screen and (min-width: 1025px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+</style>

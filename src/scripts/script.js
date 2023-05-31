@@ -103,4 +103,63 @@ function startSlideshowFromCurrentWithDelay() {
   }, 10000); // 10 seconds
 }
 
+/* Pop-up: Subscribe! */
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("popup");
+  const closeBtn = document.querySelector(".close");
+  const subscribeBtn = document.getElementById("subscribe-btn");
+  const emailInput = document.getElementById("email-input");
+
+  function showPopup() {
+    if (!localStorage.getItem("popupClosed")) {
+      popup.style.display = "block";
+    }
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+    localStorage.setItem("popupClosed", true);
+    setTimeout(function () {
+      localStorage.removeItem("popupClosed");
+    }, 5 * 60 * 1000); // Remove the "popupClosed" item after 5 minutes
+  }
+
+  function subscribe() {
+    const email = emailInput.value;
+    if (email) {
+      // Code to handle the subscription (e.g., send data to a server)
+      showSuccessMessage();
+    }
+  }
+
+  function showSuccessMessage() {
+    const successMessage = document.createElement("p");
+    const line1 = document.createTextNode("Tillykke, du er nu tilmeldt vores nyhedsbrev. Vi går sammen en glædelig tid i møde!");
+    const line2 = document.createTextNode("De bedste hilsner, Que Pasa Papi");
+
+    successMessage.style.marginTop = "1rem";
+    successMessage.style.fontWeight = "bold";
+
+    successMessage.appendChild(line1);
+    successMessage.appendChild(document.createElement("br"));
+    successMessage.appendChild(line2);
+
+    document.querySelector(".popupContent").appendChild(successMessage);
+    emailInput.value = "";
+    subscribeBtn.style.display = "none";
+    closeBtn.removeEventListener("click", closePopup);
+    closeBtn.addEventListener("click", closePopupWithSuccessMessage);
+  }
+
+  function closePopupWithSuccessMessage() {
+    popup.style.display = "none";
+  }
+
+  // Show the popup after a delay (e.g., 2 seconds)
+  setTimeout(showPopup, 2000);
+
+  closeBtn.addEventListener("click", closePopup);
+  subscribeBtn.addEventListener("click", subscribe);
+});
+
 /* Auto-scroll */

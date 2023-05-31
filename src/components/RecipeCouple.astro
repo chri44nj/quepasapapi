@@ -3,7 +3,7 @@ const { order, link, title } = Astro.props;
 ---
 
 <div class="recipeGrid">
-  <img class={order} src={link} alt="" />
+  <img class={order} src={link} alt="delicious recipe" />
   <div>
     <h3>{title}</h3>
     <slot />
@@ -14,7 +14,7 @@ const { order, link, title } = Astro.props;
   .recipeGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-inline: 2rem;
+    margin-inline: 10%;
     margin-block: 5rem;
     gap: 2rem;
   }
