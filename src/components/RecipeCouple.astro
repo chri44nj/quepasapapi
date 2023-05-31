@@ -16,7 +16,7 @@ const { order, link, title } = Astro.props;
     grid-template-columns: repeat(2, 1fr);
     margin-inline: 10%;
     margin-block: 5rem;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   img {
@@ -36,7 +36,7 @@ const { order, link, title } = Astro.props;
 
   h3 {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   /*__________ WEB (SMALLER SCREENS) __________*/
@@ -44,6 +44,10 @@ const { order, link, title } = Astro.props;
     h3 {
       font-size: 3rem;
       writing-mode: horizontal-tb;
+    }
+
+    .recipeGrid {
+      gap: 3rem;
     }
 
     .recipeGrid div {
