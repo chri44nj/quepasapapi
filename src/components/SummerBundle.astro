@@ -4,15 +4,16 @@ import Button from "../components/Button.astro";
 
 <div class="summerBundle">
   <img id="summerBundle" src="img/summerBundle.webp" alt="tapas summer bundle" />
-  <p id="productInfo">249 DKK // 4-6 personer // Fås juni, juli & august</p>
+  <p id="productInfo">249 Kr. // 4-6 personer // Fås juni, juli & august</p>
   <img id="products" src="img/productsV2.webp" alt="product img" />
+  <h3>Sommerens fusion af dansk hygge og autentisk spansk tapas!</h3>
   <p>Der er få ting, der slår en god dansk sommer... Så skulle det da lige være en omgang lækker spansk tapas! Men hvorfor nøjes med blot den ene?</p>
-  <p>Med Que Pasa Papis Summer Bundle får du uden besvær det bedste fra begge verdener. For blot 249 DKK kvitterer vi med en bundle fuld af nøje udvalgt, autentisk spansk tapas, der nemt kan tages med, når du drager ud i det danske sommerland med dine yndlingsmennesker.</p>
+  <p>Med Que Pasa Papis Summer Bundle får du uden besvær det bedste fra begge verdener. For blot <span class="price">249 Kr.</span> kvitterer vi med en bundle fuld af nøje udvalgt, autentisk spansk tapas, der nemt kan tages med, når du drager ud i det danske sommerland med dine yndlingsmennesker.</p>
   <p>Bestil din Summer Bundle nu og gør dig klar til en uforglemmelig oplevelse, med dem du har kært, under åben himmel!</p>
   <Button link="https://quepasapapi.com/cart" variant="primary" title="Køb nu" />
 </div>
 
-<span>
+<span class="heading">
   <h2>Inkluderet</h2>
   <div class="underline"></div>
 </span>
@@ -58,7 +59,7 @@ import Button from "../components/Button.astro";
     width: 90%;
   }
 
-  span {
+  .heading {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -84,6 +85,16 @@ import Button from "../components/Button.astro";
     margin-right: 10%;
   }
 
+  h3 {
+    max-width: 40ch;
+    font-size: 1rem;
+  }
+
+  .price {
+    font-weight: bold;
+    color: ;
+  }
+
   /*__________ TABLET __________*/
   @media only screen and (min-width: 481px) {
     #summerBundle {
@@ -101,8 +112,12 @@ import Button from "../components/Button.astro";
       font-size: 2rem;
     }
 
+    h3 {
+      font-size: 1.5rem;
+    }
+
     ul li {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     #productInfo {
@@ -111,6 +126,13 @@ import Button from "../components/Button.astro";
 
     p {
       font-size: 1.2rem;
+    }
+
+    #summerBundle {
+      width: 50%;
+    }
+    #products {
+      width: 30%;
     }
   }
 

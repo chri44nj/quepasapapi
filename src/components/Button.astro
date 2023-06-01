@@ -39,26 +39,41 @@ const { variant, link, title } = Astro.props;
     color: #d1e756;
   }
 
-  .secondary {
+  .secondary,
+  .secondaryMedium,
+  .secondaryBig {
     background-color: transparent;
     border: 2px solid black;
     font-size: 1rem;
     padding: 0.25rem 1rem;
   }
 
+  .secondary {
+    font-size: 1rem;
+  }
+
+  .secondaryMedium {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
   .secondaryBig {
-    background-color: transparent;
-    border: 2px solid black;
     font-size: 1.5rem;
-    padding: 0.25rem 1rem;
   }
 
   .secondary:hover,
+  .secondaryMedium:hover,
   .secondaryBig:hover {
     background-color: #d1e756;
   }
 
   .secondary:hover a {
     color: black;
+  }
+
+  @media only screen and (min-width: 769px) {
+    .secondaryMedium {
+      font-size: 1.5rem;
+    }
   }
 </style>
