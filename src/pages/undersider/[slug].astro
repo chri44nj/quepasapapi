@@ -23,7 +23,7 @@ const { recipe } = Astro.props;
 ---
 
 <Secondarylayout>
-  <img class="hideWeb" src={"../img/" + recipe.img + ".webp"} alt="recipe img" />
+  <img class="hideWeb" src={"../../img/" + recipe.img + ".webp"} alt="recipe img" />
   <div class="recipeInfo hideWeb">
     <span>
       <i class="fa-solid fa-clock"></i>
@@ -91,6 +91,24 @@ const { recipe } = Astro.props;
     <img class="hideMobile" src={"../img/" + recipe.img + ".webp"} alt="recipe img" />
   </div>
 </Secondarylayout>
+
+<script>
+  const burgerMenu = document.querySelector(".burgerMenu");
+  const navItems = document.querySelector(".navItems");
+
+  burgerMenu.addEventListener("mousedown", () => {
+    burgerMenu.classList.toggle("active");
+    navItems.classList.toggle("active");
+    console.log("Må du have en god dag!");
+  });
+
+  document.querySelectorAll(".navItem").forEach((n) =>
+    n.addEventListener("mousedown", () => {
+      burgerMenu.classList.remove("active");
+      navItems.classList.remove("active");
+    })
+  );
+</script>
 
 <style>
   .hideMobile {
@@ -163,6 +181,7 @@ const { recipe } = Astro.props;
 
     .recipe {
       text-align: left;
+      margin-top: 10rem;
     }
 
     .recipeGrid {
