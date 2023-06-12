@@ -1,5 +1,6 @@
 ---
 import Secondarylayout from "../../layouts/Secondarylayout.astro";
+import Button from "../../components/Button.astro";
 
 export async function getStaticPaths() {
   const url = "https://bcusqvrnladycinesogy.supabase.co/rest/v1/recipes";
@@ -90,6 +91,11 @@ const { recipe } = Astro.props;
 
     <img class="hideMobile" src={"../../img/" + recipe.img + ".webp"} alt="recipe img" />
   </div>
+
+  <div class="buyProduct">
+    <h3>Mangler du tid eller overskud til selv at lave {recipe.name}?</h3>
+    <Button link="https://quepasapapi.com/cart" variant="secondary" title="Bestil fra vores partner" />
+  </div>
 </Secondarylayout>
 
 <script>
@@ -121,6 +127,12 @@ const { recipe } = Astro.props;
 
   h2 {
     text-transform: uppercase;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1rem;
   }
 
   .recipeInfo {
@@ -157,6 +169,15 @@ const { recipe } = Astro.props;
   .procedure {
     margin-top: 2rem;
     margin-inline: 10%;
+  }
+
+  .buyProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    margin-inline: 10%;
     margin-bottom: 5rem;
   }
 
@@ -172,6 +193,10 @@ const { recipe } = Astro.props;
     }
 
     h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
       font-size: 1.5rem;
     }
 

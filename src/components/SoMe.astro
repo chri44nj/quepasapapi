@@ -6,28 +6,30 @@
   <div class="underline"></div>
 </span>
 <div class="follow">
-  <p>Følg for nye produkter.</p>
+  <p>Følg for gode stunder.</p>
   <p>Følg for inspiration.</p>
-  <p class="bold">Følg vores SoMe.</p>
+  <p class="bold">Følg Que Pasa Papi.</p>
 </div>
 
-<div class="followInsta">
-  <div class="alignBottom">
-    <p>Instagram:</p>
-    <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/">@quepasapapiofficial</a>
+<div class="followWeb">
+  <div class="followInsta">
+    <span>
+      <p class="bold">Instagram</p>
+      <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/">@quepasapapiofficial</a>
+    </span>
+    <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/">
+      <img src="img/instagram.webp" alt="link to instagram" />
+    </a>
   </div>
-  <a target="_blank" href="https://www.instagram.com/quepasapapiofficial/">
-    <img src="img/instagramV2.webp" alt="link to instagram" />
-  </a>
-</div>
 
-<div class="followFB">
-  <a target="_blank" href="https://www.facebook.com/quepasapapiofficial">
-    <img src="img/facebookV2.webp" alt="link to facebook" />
-  </a>
-  <div class="alignBottom">
-    <p>Facebook:</p>
-    <a target="_blank" href="https://www.facebook.com/quepasapapiofficial">/quepasapapiofficial</a>
+  <div class="followFB">
+    <span>
+      <p class="bold">Facebook</p>
+      <a target="_blank" href="https://www.facebook.com/quepasapapiofficial">/quepasapapiofficial</a>
+    </span>
+    <a target="_blank" href="https://www.facebook.com/quepasapapiofficial">
+      <img src="img/facebookV2.webp" alt="link to facebook" />
+    </a>
   </div>
 </div>
 
@@ -39,8 +41,9 @@
   }
 
   .followInsta {
-    text-align: right;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 5rem;
     margin-inline: 10%;
@@ -48,6 +51,8 @@
 
   .followFB {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 5rem;
     margin-inline: 10%;
@@ -81,11 +86,20 @@
     color: black;
   }
 
+  span {
+    text-align: center;
+  }
+
   @media only screen and (min-width: 769px) {
     .follow {
       text-align: left;
       margin-left: 10%;
       font-size: 2rem;
+    }
+
+    .followWeb {
+      display: flex;
+      justify-content: center;
     }
 
     .followInsta {
@@ -99,7 +113,11 @@
     }
 
     img {
-      width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 2rem;
     }
   }
 </style>

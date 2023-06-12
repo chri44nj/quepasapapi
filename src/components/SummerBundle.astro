@@ -4,17 +4,18 @@ import Button from "../components/Button.astro";
 
 <div class="summerBundle">
   <img id="summerBundle" src="img/summerBundle.webp" alt="tapas summer bundle" />
-  <p id="productInfo">249 Kr. // 4-6 personer // Fås juni, juli & august</p>
-  <img id="products" src="img/productsV2.webp" alt="product img" />
   <h3>Sommerens fusion af dansk hygge og autentisk spansk tapas!</h3>
-  <p>Der er få ting, der slår en god dansk sommer... Så skulle det da lige være en omgang lækker spansk tapas! Men hvorfor nøjes med blot den ene?</p>
-  <p>Med Que Pasa Papis Summer Bundle får du uden besvær det bedste fra begge verdener. For blot <span class="price">249 Kr.</span> kvitterer vi med en bundle fuld af nøje udvalgt, autentisk spansk tapas, der nemt kan tages med, når du drager ud i det danske sommerland med dine yndlingsmennesker.</p>
-  <p>Bestil din Summer Bundle nu og gør dig klar til en uforglemmelig oplevelse, med dem du har kært, under åben himmel!</p>
-  <Button link="https://quepasapapi.com/cart" variant="primary" title="Køb nu" />
+  <img id="products" src="img/productsV2.webp" alt="product img" />
+  <p id="productInfo">249 Kr. // 4-6 personer // Fås juni, juli & august</p>
+  <h4>Elsker du også god mad, gode venner og gode stunder?</h4>
+  <p>Selvfølgelig gør du det; det er nemlig noget af det, der gør livet værd at leve. <br /> Vores mission er imidlertid ikke at ændre verden. Det vi drømmer om, er blot et liv, hvor begrænset tid og overskud ikke står i vejen for det, der betyder mest for os; at nyde gode stunder med gode mennesker. <br /> Hos Que Pasa Papi ved vi, at drømmen er lige indenfor rækkevidde; alt du skal gøre er, at gribe fat i den!</p>
+  <p>Med Que Pasa Papis Summer Bundle bliver det nærmest ikke lettere: For blot <span class="price">249 Kr.</span> leverer vi en pakke propfyldt med nøje udvalgt, autentisk spansk tapas der uden besvær kan tages med, hvor end du vælger at tilbringe de gode stunder.</p>
+  <p>Er du klar til at nyde livet?</p>
+  <Button link="https://quepasapapi.com/cart" variant="primary" title="Bestil nu" />
 </div>
 
 <span class="heading">
-  <h2>Inkluderet</h2>
+  <h2>Summer Bundle</h2>
   <div class="underline"></div>
 </span>
 <ul class="list1">
@@ -32,7 +33,7 @@ import Button from "../components/Button.astro";
 </ul>
 
 <slot />
-<Button link="https://quepasapapi.com/cart" variant="primary" title="Køb nu" />
+<Button link="https://quepasapapi.com/cart" variant="primary" title="Bestil nu" />
 
 <style>
   .summerBundle {
@@ -86,8 +87,17 @@ import Button from "../components/Button.astro";
   }
 
   h3 {
-    max-width: 40ch;
-    font-size: 1rem;
+    max-width: 90%;
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    margin-top: 2rem;
+    max-width: 90%;
+  }
+
+  #summerBundle {
+    width: 80%;
   }
 
   .price {
@@ -113,7 +123,8 @@ import Button from "../components/Button.astro";
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      width: 40%;
     }
 
     ul li {
@@ -129,7 +140,7 @@ import Button from "../components/Button.astro";
     }
 
     #summerBundle {
-      width: 50%;
+      width: 40%;
     }
     #products {
       width: 30%;
